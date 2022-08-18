@@ -5,11 +5,11 @@ public class ContaCorrente extends Conta implements Tributavel{
     }
 
     @Override
-    public boolean saca(double valor){
+    public void saca(double valor){
         double taxa = valor * 0.02;
         double valorComTaxa = valor + taxa;
 
-        return super.saca(valorComTaxa);
+        super.saca(valorComTaxa);
     }
 
     @Override

@@ -18,9 +18,12 @@ public class Fluxo {
 
             try{
                 System.out.println(i);
-                int a = i / 0;
-            }catch(Exception ex){
-                System.out.println(ex);
+                ContaCorrente cc = null;
+                cc.deposita(100);
+                //int a = i / 0;
+
+            }catch(NullPointerException | ArithmeticException ex){
+                ex.printStackTrace();
             }
 
         }
